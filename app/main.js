@@ -38,7 +38,7 @@ function obtenerClima() {
     .then((response) => response.json())
     .then((data) => console.log(data));
 };
-
+ 
 const fechaClima = document.getElementById("fechaClima"); 
 
 function actualizarDatosFechaClima () {
