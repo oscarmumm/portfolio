@@ -5,7 +5,7 @@ const options = {
     maximumAge: 0
 };
 
-function success(pos) {
+const  success = (pos) => {
     const crd = pos.coords;
     console.log("location ready")
     return ubicacion = {
@@ -14,11 +14,17 @@ function success(pos) {
     }
 };
 
-function error(err) {
+const error = (err) => {
     console.warn(`ERROR(${err.code}): ${err.message}`);
 };
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+const obtenerUbicacion = async () => {
+    try {
+        navigator.geolocation.getCurrentPosition(success, error, options);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 
 // Funcionalidades para el estilo Android
@@ -33,12 +39,23 @@ const [day, month, year] = [date.getDate(), date.getMonth(), date.getFullYear()]
 // Datos del clima 
 const apiKeyClima = "1e0852abb42466a00a4d6d999c3e2b64";
 
-function obtenerClima() {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${ubicacion.lat}&lon=${ubicacion.lon}&appid=${apiKeyClima}`)
-    .then((response) => response.json())
-    .then((data) => console.log(data));
-};
- 
+const obtenerClima = async () => {
+    try {
+        const fetchingClima = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${ubicacion.lat}&lon=${ubicacion.lon}&appid=${apiKeyClima}`);
+        const fetchingUbicacion = await obtenerUbicacion();
+        const datosClima = fetchingClima.json();
+        console.log(datosClima);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// function obtenerClima() {
+//     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${ubicacion.lat}&lon=${ubicacion.lon}&appid=${apiKeyClima}`)
+//     .then((response) => response.json())
+//     .then((data) => console.log(data));
+// };
+
 const fechaClima = document.getElementById("fechaClima"); 
 
 function actualizarDatosFechaClima () {
