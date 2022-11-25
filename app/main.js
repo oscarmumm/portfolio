@@ -2,6 +2,7 @@
 const iconoClima = document.getElementById("iconoClima");
 const homeTemp = document.getElementById("homeTemp");
 const homeCiudad = document.getElementById("homeCiudad");
+const apiKeyClima = "1e0852abb42466a00a4d6d999c3e2b64";
 
 const options = {
     enableHighAccuracy: true,
