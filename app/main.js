@@ -41,7 +41,7 @@ const date = new Date();
 const [horas, minutos, segundos] = [date.getHours(), date.getMinutes(), date.getSeconds()]
 
 // Datos del clima 
-const apiKeyClima = "1e0852abb42466a00a4d6d999c3e2b64";
+
 
 const divFecha = document.getElementById("divFecha");
 
