@@ -19,7 +19,8 @@ const ubicacionClima = (pos) => {
     .then((response) => response.json())
     .then((data) => {
         homeTemp.innerText = `${Math.round(data.main.temp)}°C`;
-        iconoClima.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        iconoClima.src = `./icons/weather-icons/${data.weather[0].icon}.svg`
+        //iconoClima.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         return datosClima = data;
     })
 };

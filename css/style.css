@@ -143,11 +143,13 @@ h1 {
     justify-content: space-between;
 }
 .fecha_clima {
+    width: 100%;
     margin-top: 4rem;
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 .home_ciudad {
@@ -162,9 +164,11 @@ h1 {
     color: #fff;
     z-index: -1;
 }
+
 .fecha_clima img {
-    width: 25%;
-    margin: -1.5rem -.75rem 0rem -.75rem;
+    width: 100%;
+    max-width: 130px;
+    margin: -30px;
 }
 .apps_box {
     height: 15%;
