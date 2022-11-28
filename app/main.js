@@ -8,9 +8,12 @@ const relojGrandeApp = document.getElementById('relojGrandeApp');
 const fechaApp = document.getElementById('fechaApp');
 const app = document.querySelectorAll('.app');
 const iconoAppReloj = document.getElementById('iconoAppReloj');
-const botonNavAtras = document.getElementById('botonNavAtras')
+const iconoAppClima = document.getElementById('iconoAppClima');
+const botonNavAtras = document.getElementById('botonNavAtras');
 
 const appReloj = document.getElementById('appReloj');
+const appClima = document.getElementById('appClima');
+const pantallaAppClima = document.getElementById('pantallaAppClima');
 
 const options = {
     enableHighAccuracy: true,
@@ -23,12 +26,18 @@ const ubicacionClima = (pos) => {
     console.log("location ready")
     let lat = crd.latitude;
     let lon = crd.longitude;
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKeyClima}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=es&appid=${apiKeyClima}&units=metric`)
     .then((response) => response.json())
     .then((data) => {
         homeTemp.innerText = `${Math.round(data.main.temp)}°C`;
-        iconoClima.src = `./icons/weather-icons/${data.weather[0].icon}.svg`
-        //iconoClima.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        iconoClima.src = `./icons/weather-icons/${data.weather[0].icon}.svg`;
+        pantallaAppClima.children[0].src = `./icons/weather-icons/${data.weather[0].icon}.svg`;
+        pantallaAppClima.children[1].innerText = `${Math.round(data.main.temp)}°C`;
+        pantallaAppClima.children[2].innerText = `ST: ${data.main.feels_like}°C`;
+        pantallaAppClima.children[3].innerText = `${data.name}, ${data.sys.country}`; 
+        pantallaAppClima.children[4].innerText = `${data.weather[0].description}`;
+        pantallaAppClima.children[5].innerText = `Presión: ${data.main.pressure} hpa`;
+        pantallaAppClima.children[6].innerText = `Humedad: ${data.main.humidity}%`;
         return datosClima = data;
     })
 };
@@ -58,8 +67,8 @@ const divFecha = document.getElementById("divFecha");
 const fecha = new Date();
 const [dia, mes, anio] = [fecha.getDate(), fecha.getMonth(), fecha.getFullYear()]; 
 const actualizarFecha = (fecha) => {
-    divFecha.innerText = `${dia}-${mes}-${anio} `;
-    fechaApp.innerText = `${dia}-${mes}-${anio} `;
+    divFecha.innerText = `${dia}-${mes + 1}-${anio} `;
+    fechaApp.innerText = `${dia}-${mes + 1}-${anio} `;
 }  
 actualizarFecha()
 
@@ -86,18 +95,18 @@ setInterval(fechaHora, 1000)
 
 
 botonEntrarAndroid.addEventListener("click", () => {
-    circulosInicio.forEach((element)=> {
-        element.classList.remove("saltar");
-        element.classList.add("irse");
-    });
     introAndroid.classList.add("subirPantalla");
 });
 
 iconoAppReloj.addEventListener("click", () => {
-    appReloj.classList.add('mostrar_app')
+    appReloj.classList.add('mostrar_app');
+});
+iconoAppClima.addEventListener("click", (e) => {
+    appClima.classList.add('mostrar_app');
 });
 
 botonNavAtras.addEventListener("click", () => {
     appReloj.classList.remove('mostrar_app');
+    appClima.classList.remove('mostrar_app');
     console.log('click aqui')
 });
