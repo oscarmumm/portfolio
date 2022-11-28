@@ -4,6 +4,14 @@ const homeTemp = document.getElementById("homeTemp");
 const homeCiudad = document.getElementById("homeCiudad");
 const apiKeyClima = "1e0852abb42466a00a4d6d999c3e2b64";
 
+const relojGrandeApp = document.getElementById('relojGrandeApp');
+const fechaApp = document.getElementById('fechaApp');
+const app = document.querySelectorAll('.app');
+const iconoAppReloj = document.getElementById('iconoAppReloj');
+const botonNavAtras = document.getElementById('botonNavAtras')
+
+const appReloj = document.getElementById('appReloj');
+
 const options = {
     enableHighAccuracy: true,
     timeout: 5000,
@@ -50,7 +58,8 @@ const divFecha = document.getElementById("divFecha");
 const fecha = new Date();
 const [dia, mes, anio] = [fecha.getDate(), fecha.getMonth(), fecha.getFullYear()]; 
 const actualizarFecha = (fecha) => {
-    divFecha.innerText = `${dia}-${mes}-${anio} `
+    divFecha.innerText = `${dia}-${mes}-${anio} `;
+    fechaApp.innerText = `${dia}-${mes}-${anio} `;
 }  
 actualizarFecha()
 
@@ -66,8 +75,10 @@ const fechaHora = () => {
     mm = mm < 10 ? `0${mm}` : mm
     ss = ss < 10 ? `0${ss}` : ss
 
-    let hora = `${hh}:${mm}:${ss}`
-    divReloj.innerText = hora
+    let horaSinSegundos = `${hh}:${mm}`; 
+    let hora = `${hh}:${mm}:${ss}`;
+    divReloj.innerText = horaSinSegundos;
+    relojGrandeApp.innerText = hora;
 }
 
 fechaHora()
@@ -79,5 +90,14 @@ botonEntrarAndroid.addEventListener("click", () => {
         element.classList.remove("saltar");
         element.classList.add("irse");
     });
-    introAndroid.classList.add("desaparecerArriba");
-})
+    introAndroid.classList.add("subirPantalla");
+});
+
+iconoAppReloj.addEventListener("click", () => {
+    appReloj.classList.add('mostrar_app')
+});
+
+botonNavAtras.addEventListener("click", () => {
+    appReloj.classList.remove('mostrar_app');
+    console.log('click aqui')
+});
