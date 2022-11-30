@@ -9,10 +9,12 @@ const fechaApp = document.getElementById('fechaApp');
 const app = document.querySelectorAll('.app');
 const iconoAppReloj = document.getElementById('iconoAppReloj');
 const iconoAppClima = document.getElementById('iconoAppClima');
+const iconoAppCalculadora = document.getElementById('iconoAppCalculadora');
 const botonNavAtras = document.getElementById('botonNavAtras');
 
 const appReloj = document.getElementById('appReloj');
 const appClima = document.getElementById('appClima');
+const appCalculadora = document.getElementById('appCalculadora');
 const pantallaAppClima = document.getElementById('pantallaAppClima');
 
 const options = {
@@ -38,6 +40,9 @@ const ubicacionClima = (pos) => {
         pantallaAppClima.children[4].innerText = `${data.weather[0].description}`;
         pantallaAppClima.children[5].innerText = `Presión: ${data.main.pressure} hpa`;
         pantallaAppClima.children[6].innerText = `Humedad: ${data.main.humidity}%`;
+        appClima.style.background = `url(/wallpapers/weather-wallpapers/${data.weather[0].icon}.jpeg)`;
+        appClima.style.backgroundRepeat = 'no-repeat';
+        appClima.style.backgroundSize = 'cover';
         return datosClima = data;
     })
 };
@@ -101,12 +106,16 @@ botonEntrarAndroid.addEventListener("click", () => {
 iconoAppReloj.addEventListener("click", () => {
     appReloj.classList.add('mostrar_app');
 });
-iconoAppClima.addEventListener("click", (e) => {
+iconoAppClima.addEventListener("click", () => {
     appClima.classList.add('mostrar_app');
+});
+iconoAppCalculadora.addEventListener("click", () => {
+    appCalculadora.classList.add('mostrar_app');
 });
 
 botonNavAtras.addEventListener("click", () => {
     appReloj.classList.remove('mostrar_app');
     appClima.classList.remove('mostrar_app');
+    appCalculadora.classList.remove('mostrar_app');
     console.log('click aqui')
 });

@@ -181,7 +181,7 @@ h1 {
 
 
 .nav_bar {
-    max-width: 500px;
+    max-width: 480px;
     position: fixed;
     bottom: 0;
     z-index: 1;
@@ -202,7 +202,7 @@ h1 {
 .app {
     width: 100vw;
     height: 100vh;
-    max-width: 500px;
+    max-width: 480px;
     position: fixed;
 }
 
@@ -230,8 +230,13 @@ h1 {
 }
 
 .app_clima {
-    background-color: #4C8BF5;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 3px 3px #000;
 }
+
 
 .pantalla_clima img {
     width: 50%;
@@ -246,9 +251,37 @@ h1 {
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 30px;
 }
+
+.app_calculadora {
+    background-color: #1F2430;
+}
+.botones_calculadora {
+    height: 65%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+#boton-borrar-todo {
+    grid-column: 1/3;
+}
+#boton-igual {
+    grid-column: 3/5;
+}
+.pantalla_calculadora {
+    height: 25%;
+    background-color: #000;
+}
+.boton_calc {
+    
+}
+
 @media only screen and (min-width: 500px) {
     main {
         margin: 0 calc((100vw - 500px)/2);
+        border-left: 10px solid black;
+        border-right: 10px solid black;
     }
     .fecha_clima {
         font-size: 3rem;
