@@ -239,7 +239,7 @@ h1 {
 
 
 .pantalla_clima img {
-    width: 50%;
+    width: 80%;
 } 
 .pantalla_clima h2 {
     font-size: 4rem;
@@ -247,9 +247,12 @@ h1 {
 .pantalla_clima {
     margin: 2rem;
     padding: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 30px;
+}
+.pantalla_clima p {
+    padding: .5rem 0;
 }
 
 .app_calculadora {
@@ -265,16 +268,29 @@ h1 {
 }
 #boton-borrar-todo {
     grid-column: 1/3;
+    background-color: #FFC34D;
 }
 #boton-igual {
     grid-column: 3/5;
+    background-color: #D5DD4F;
 }
 .pantalla_calculadora {
     height: 25%;
     background-color: #000;
+    border-radius: 0 0 20px 20px;
 }
 .boton_calc {
-    
+    border-radius: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    border: none;
+}
+.boton_calc:hover {
+    margin: 3px;
+}
+.boton_calc.operacion {
+    background-color: #5CCFE6;
 }
 
 @media only screen and (min-width: 500px) {
