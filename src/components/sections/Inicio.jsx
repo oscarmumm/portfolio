@@ -12,7 +12,7 @@ export default function Inicio() {
             const timeout = setTimeout(() => {
                 setDisplayedText(text.slice(0, index + 1));
                 setIndex(index + 1);
-            }, 100);
+            }, 75);
 
             return () => clearTimeout(timeout);
         }

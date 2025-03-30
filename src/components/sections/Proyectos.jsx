@@ -16,7 +16,7 @@ export default function Proyectos() {
                 Estos son algunos de los proyectos que hice para poner en
                 práctica mis habilidades
             </p>
-            <ul className='text-xl text-cyan-50 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-12'>
+            <ul className='text-xl text-cyan-50 lg:grid md:gap-12 md:p-10'>
                 {ProjectsData.map((project) => (
                     <li key={project.titulo}>
                         <ProjectCard proyecto={project} />

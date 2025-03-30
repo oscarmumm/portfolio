@@ -26,12 +26,12 @@ const iconosTecnologias = {
 
 export default function ProjectCard({ proyecto }) {
     return (
-        <div className='bg-cyan-600 rounded-xl shadow-lg max-w-80 lg:max-w-xl w-full h-full mb-5 grid grig-rows-[auto-1fr] lg:grid-rows-2 transition-transform duration-300 hover:scale-105 cursor-default'>
+        <div className='bg-cyan-600 rounded-lg shadow-lg w-full max-w-6xl h-full mb-5 grid grig-rows-[auto-1fr] lg:grid-cols-2 transition-transform duration-300 hover:scale-102 cursor-default'>
             <div className=' overflow-hidden'>
                 <img
                     src={proyecto.imagenPortada}
                     alt={`imagen proyecto ${proyecto.titulo}`}
-                    className='w-full h-full object-cover rounded-tl-xl rounded-tr-xl'
+                    className='w-full h-full object-cover rounded-tl-lg rounded-tr-lg lg:rounded-tr-none lg:rounded-bl-lg'
                 />
             </div>
             <div className='flex flex-col justify-between p-3'>
