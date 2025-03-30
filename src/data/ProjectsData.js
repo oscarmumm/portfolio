@@ -27,7 +27,7 @@ export const ProjectsData = [
     {
         titulo: 'Gestor de Proyectos',
         descripcion:
-            'Una PWA que permite planificar proyectos, dividiéndolos por etapas y agregando tareas que luego pueden moverse entre las distintas etapas. Esta versión utdivza local storage para que pueda probarse su funcionalidad con mas facilidad.',
+            'Una PWA que permite planificar proyectos, dividiéndolos por etapas y agregando tareas que luego pueden moverse entre las distintas etapas. Esta versión utiliza local storage para que pueda probarse su funcionalidad con mas facilidad.',
         imagenPortada: imagenGestorProyectos,
         imagenes: [],
         demo: 'https://oscardev-gestordeproyectos.netlify.app/',

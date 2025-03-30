@@ -11,14 +11,14 @@ export default function Proyectos() {
             transition={{ duration: 0.5 }}
             viewport={{ once: false, amount: 0.1 }}
         >
-            <h2 className='text-3xl font-black mb-12'>PROYECTOS</h2>
+            <h2 className='text-3xl font-bold mb-12'>PROYECTOS</h2>
             <p className='text-xl text-cyan-50 text-center mb-10'>
                 Estos son algunos de los proyectos que hice para poner en
                 práctica mis habilidades
             </p>
-            <ul className='text-xl text-cyan-50 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12'>
+            <ul className='text-xl text-cyan-50 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-12'>
                 {ProjectsData.map((project) => (
-                    <li>
+                    <li key={project.titulo}>
                         <ProjectCard proyecto={project} />
                     </li>
                 ))}

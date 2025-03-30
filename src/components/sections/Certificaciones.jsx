@@ -21,11 +21,11 @@ export default function Certificaciones() {
                     <GoVerified />
                 </IconContext.Provider>
             </div>
-            <h2 className='text-3xl font-black mb-12'>CERTIFICACIONES</h2>
+            <h2 className='text-3xl font-bold mb-12'>CERTIFICACIONES</h2>
             <div className='lg:grid lg:grid-cols-3 gap-8'>
                 <div>
-                    <p className='text-xl font-bold mb-2'>TecLab</p>
-                    <ul className='text-base text-cyan-50 italic mb-5'>
+                    <p className='text-xl xl:text-2xl font-bold mb-2'>TecLab</p>
+                    <ul className='text-base xl:text-xl text-cyan-50  mb-5'>
                         <li>
                             Tecnicatura Superior en Programación <br />{' '}
                             (Cursando 2do año)
@@ -33,30 +33,34 @@ export default function Certificaciones() {
                     </ul>
                 </div>
                 <div className='row-span-3'>
-                    <p className='text-xl font-bold mb-2'>Educación IT</p>
-                    <ul className='text-base text-cyan-50 italic mb-5'>
-                        <li>Desarrollo Web con HTML</li>
-                        <li>Introducción a UX</li>
-                        <li>JavaScript desde cero</li>
-                        <li>Maquetador Web Avanzado</li>
-                        <li>Introducción al Paradigma de Objetos</li>
-                        <li>Git: Desarrollo colaborativo</li>
-                        <li>JavaScript desarrollador Avanzado</li>
-                        <li>Responsive Web & Bootstrap</li>
-                        <li>React JS Developer</li>
+                    <p className='text-xl xl:text-2xl font-bold mb-2'>
+                        Educación IT
+                    </p>
+                    <ul className='text-base xl:text-xl text-cyan-50  mb-5'>
                         <li>Progressive Web Apps</li>
+                        <li>React JS Developer</li>
+                        <li>Responsive Web & Bootstrap</li>
+                        <li>JavaScript Desarrollador Avanzado</li>
+                        <li>Git: Desarrollo colaborativo</li>
+                        <li>Introducción al Paradigma de Objetos</li>
+                        <li>Maquetador Web Avanzado</li>
+                        <li>JavaScript desde cero</li>
+                        <li>Introducción a UX</li>
+                        <li>Desarrollo Web con HTML</li>
                     </ul>
                 </div>
                 <div>
-                    <p className='text-xl font-bold mb-2'>FreeCodeCamp</p>
-                    <ul className='text-base text-cyan-50 italic mb-5'>
-                        <li>Responsive Web Design</li>
+                    <p className='text-xl xl:text-2xl font-bold mb-2'>
+                        FreeCodeCamp
+                    </p>
+                    <ul className='text-base xl:text-xl text-cyan-50  mb-5'>
                         <li>JavaScript Algorithms and Data Structures</li>
+                        <li>Responsive Web Design</li>
                     </ul>
                 </div>
                 <div>
-                    <p className='text-xl font-bold mb-2'>UTN</p>
-                    <ul className='text-base text-cyan-50 italic mb-5'>
+                    <p className='text-xl xl:text-2xl font-bold mb-2'>UTN</p>
+                    <ul className='text-base xl:text-xl text-cyan-50  mb-5'>
                         <li>Introducción a la programación</li>
                     </ul>
                 </div>

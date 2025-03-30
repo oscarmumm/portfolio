@@ -1,1 +1,10 @@
-@import "tailwindcss";
+/* montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* fira code font */
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-firacode: 'Fira Code', monospace;
+}

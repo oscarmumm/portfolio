@@ -19,7 +19,8 @@ export default function Inicio() {
                 </IconContext.Provider>
             </div>
             <h1 className='text-4xl lg:text-7xl font-black'>OSCAR MUMM</h1>
-            <p className='text-2xl lg:text-4xl font-bold text-cyan-50'>Desarrollador Web Frontend</p>
+            {/* hacer animacion de tipeo en "desarrollador frontend", cursor parpadeante. fondo negro? */}
+            <p className='text-2xl lg:text-4xl font-bold text-cyan-50 font-firacode'>Desarrollador Frontend</p>
         </motion.section>
     );
 }

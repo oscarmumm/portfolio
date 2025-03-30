@@ -27,7 +27,7 @@ export default function Habilidades() {
                     <VscVscode />
                 </IconContext.Provider>
             </div>
-            <h2 className='text-3xl font-bold mb-12'>Habilidades</h2>
+            <h2 className='text-3xl font-bold mb-12'>HABILIDADES</h2>
             <ul className='text-base text-cyan-50 grid grid-cols-3 lg:grid-cols-4 gap-3 place-items-center'>
                 <IconContext.Provider
                     value={{ className: 'text-cyan-300 h-16 w-16' }}

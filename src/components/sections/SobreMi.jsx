@@ -20,12 +20,12 @@ export default function SobreMi() {
                     <IoPerson />
                 </IconContext.Provider>
             </div>
-            <h2 className='text-3xl font-bold mb-12'>Sobre mi</h2>
+            <h2 className='text-3xl font-bold mb-12'>SOBRE MI</h2>
             <p className='text-xl text-cyan-50 text-center'>
                 Trabajo como encargado en una franquicia de comida rápida desde
                 hace 16 años, pero siempre me interesó la tecnología y el
                 <strong className='text-cyan-300'> Desarrollo Web</strong>. Completé la
-                certificación <strong className='text-cyan-300'> Front-end Web Developer </strong> en Educación IT y actualmente estoy cursando la
+                certificación <strong className='text-cyan-300'> Frontend Web Developer </strong> en Educación IT y actualmente estoy cursando la
                 <strong className='text-cyan-300'> Tecnicatura Superior en Programación </strong> en TecLab. Me
                 especializo en <strong className='text-cyan-300'> React con JavaScript y Tailwind CSS </strong>, y disfruto
                 desarrollando interfaces interactivas y eficientes. Busco mi

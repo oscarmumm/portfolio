@@ -35,7 +35,7 @@ export default function Contacto() {
                     <MdMailOutline />
                 </IconContext.Provider>
             </div>
-            <h2 className='text-3xl font-black mb-12'>CONTACTO</h2>
+            <h2 className='text-3xl font-bold mb-12'>CONTACTO</h2>
             <ul className='text-xl text-cyan-50 text-center'>
                 <li className='flex items-center mb-10'>
                     <p className='mr-5'>oscarmumm@gmail.com</p>

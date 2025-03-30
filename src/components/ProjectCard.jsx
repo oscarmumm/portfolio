@@ -26,8 +26,8 @@ const iconosTecnologias = {
 
 export default function ProjectCard({ proyecto }) {
     return (
-        <div className='bg-cyan-600 rounded-xl shadow-lg max-w-80 w-full h-full mb-5 grid grid-rows-[auto_1fr]'>
-            <div className='h-44 w-full aspect-square overflow-hidden'>
+        <div className='bg-cyan-600 rounded-xl shadow-lg max-w-80 lg:max-w-xl w-full h-full mb-5 grid grig-rows-[auto-1fr] lg:grid-rows-2 transition-transform duration-300 hover:scale-105 cursor-default'>
+            <div className=' overflow-hidden'>
                 <img
                     src={proyecto.imagenPortada}
                     alt={`imagen proyecto ${proyecto.titulo}`}
@@ -38,28 +38,28 @@ export default function ProjectCard({ proyecto }) {
                 <h2 className='text-xl font-bold text-center'>
                     {proyecto.titulo}
                 </h2>
-                <p className='text-base my-3'>{proyecto.descripcion}</p>
-                <div className='flex my-5'>
+                <p className='text-base m-3'>{proyecto.descripcion}</p>
+                <div className='flex items-center justify-center mb-3'>
                     {proyecto.tecnologias.map((tecnologia, index) => {
                         const Icono = iconosTecnologias[tecnologia];
                         return Icono ? (
                             <Icono
                                 key={index}
-                                className='text-3xl mx-2 text-cyan-950'
+                                className='text-3xl mx-2 text-cyan-300'
                             />
                         ) : null;
                     })}
                 </div>
-                <div className='flex items-center justify-between text-base font-bold'>
+                <div className='flex items-center justify-end text-base font-bold'>
                     <a
-                        className='p-2 bg-cyan-800 rounded-lg shadow-lg min-w-32 text-center'
+                        className='p-2 bg-cyan-800 rounded-lg shadow-lg min-w-32 w-full mx-2 text-center'
                         target='_blank'
                         href={proyecto.demo}
                     >
                         Demo
                     </a>
                     <a
-                        className='p-2 bg-cyan-800 rounded-lg shadow-lg min-w-32 text-center'
+                        className='p-2 bg-cyan-800 rounded-lg shadow-lg min-w-32 w-full mx-2 text-center'
                         target='_blank'
                         href={proyecto.codigo}
                     >
