@@ -1,17 +1,36 @@
 import { motion } from 'framer-motion';
-
-import { FaHtml5 } from 'react-icons/fa';
-import { FaCss3Alt } from 'react-icons/fa';
-import { FaGitAlt } from 'react-icons/fa';
-import { RiJavascriptFill } from 'react-icons/ri';
+import { FaHtml5, FaCss3Alt, FaGitAlt, FaReact } from 'react-icons/fa';
+import { RiJavascriptFill, RiTailwindCssFill } from 'react-icons/ri';
 import { BiLogoTypescript } from 'react-icons/bi';
-import { RiTailwindCssFill } from 'react-icons/ri';
-import { FaReact } from 'react-icons/fa';
 import { BsBootstrapFill } from 'react-icons/bs';
-import { SiReactrouter } from 'react-icons/si';
-import { SiFramer } from 'react-icons/si';
-import { IconContext } from 'react-icons';
+import { SiReactrouter, SiFramer } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
+import { IconContext } from 'react-icons';
+
+const habilidades = [
+    { nombre: 'HTML', icono: FaHtml5 },
+    { nombre: 'CSS', icono: FaCss3Alt },
+    { nombre: 'JavaScript', icono: RiJavascriptFill },
+    { nombre: 'Bootstrap', icono: BsBootstrapFill },
+    { nombre: 'ReactJS', icono: FaReact },
+    { nombre: 'Tailwind', icono: RiTailwindCssFill },
+    { nombre: 'TypeScript', icono: BiLogoTypescript },
+    { nombre: 'GIT', icono: FaGitAlt },
+    { nombre: 'React Router', icono: SiReactrouter },
+    { nombre: 'Framer Motion', icono: SiFramer },
+];
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (index) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: index * 0.10,
+            duration: 0.4,
+        },
+    }),
+};
 
 export default function Habilidades() {
     return (
@@ -22,58 +41,41 @@ export default function Habilidades() {
             transition={{ duration: 0.5 }}
             viewport={{ once: false, amount: 0.5 }}
         >
+            
             <div className='absolute top-0 flex items-center h-screen'>
-                <IconContext.Provider value={{className: 'h-screen w-screen max-w-90 opacity-10'}}>
+                <IconContext.Provider
+                    value={{ className: 'h-screen w-screen max-w-90 opacity-10' }}
+                >
                     <VscVscode />
                 </IconContext.Provider>
             </div>
+
             <h2 className='text-3xl font-bold mb-12'>HABILIDADES</h2>
-            <ul className='text-base text-cyan-50 grid grid-cols-3 lg:grid-cols-4 gap-3 place-items-center'>
-                <IconContext.Provider
-                    value={{ className: 'text-cyan-300 h-16 w-16' }}
-                >
-                    <li className='flex flex-col items-center justify-center'>
-                        <FaHtml5 />
-                        <span>HTML</span>
-                    </li>
-                    <li className='flex flex-col items-center justify-center'>
-                        <FaCss3Alt />
-                        <span>CSS</span>
-                    </li>
-                    <li className='flex flex-col items-center justify-center'>
-                        <RiJavascriptFill />
-                        <span>JavaScript</span>
-                    </li>
-                    <li className='flex flex-col items-center justify-center'>
-                        <BsBootstrapFill />
-                        <span>Bootstrap</span>
-                    </li>
-                    <li className='flex flex-col items-center justify-center'>
-                        <FaReact />
-                        <span>ReactJS</span>
-                    </li>
-                    <li className='flex flex-col items-center justify-center'>
-                        <RiTailwindCssFill />
-                        <span>Tailwind</span>
-                    </li>
-                    <li className='flex flex-col items-center justify-center'>
-                        <BiLogoTypescript />
-                        <span>TypeScript</span>
-                    </li>
-                    <li className='flex flex-col items-center justify-center'>
-                        <FaGitAlt />
-                        <span>GIT</span>
-                    </li>
-                    <li className='flex flex-col items-center justify-center'>
-                        <SiReactrouter />
-                        <span className='text-center'>React Router</span>
-                    </li>
-                    <li className='flex flex-col items-center justify-center'>
-                        <SiFramer />
-                        <span className='text-center'>Framer Motion</span>
-                    </li>
+
+            
+            <motion.ul
+                className='text-base text-cyan-50 grid grid-cols-3 lg:grid-cols-4 gap-3 place-items-center'
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+            >
+                <IconContext.Provider value={{ className: 'text-cyan-300 h-16 w-16' }}>
+                    {habilidades.map((habilidad, index) => {
+                        const Icono = habilidad.icono;
+                        return (
+                            <motion.li
+                                key={habilidad.nombre}
+                                className='flex flex-col items-center justify-center'
+                                variants={itemVariants}
+                                custom={index}
+                            >
+                                <Icono />
+                                <span className='text-center'>{habilidad.nombre}</span>
+                            </motion.li>
+                        );
+                    })}
                 </IconContext.Provider>
-            </ul>
+            </motion.ul>
         </motion.section>
     );
 }

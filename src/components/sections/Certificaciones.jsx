@@ -1,7 +1,18 @@
 import { motion } from 'framer-motion';
 import { GoVerified } from 'react-icons/go';
-import { GiDiploma } from 'react-icons/gi';
 import { IconContext } from 'react-icons';
+
+const certificationsVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (index) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: index * 0.20,
+            duration: 0.4,
+        },
+    }),
+}
 
 export default function Certificaciones() {
     return (
@@ -22,8 +33,10 @@ export default function Certificaciones() {
                 </IconContext.Provider>
             </div>
             <h2 className='text-3xl font-bold mb-12'>CERTIFICACIONES</h2>
-            <div className='lg:grid lg:grid-cols-3 gap-8'>
-                <div>
+            <motion.div className='lg:grid lg:grid-cols-3 gap-8' initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}>
+                <motion.div variants={certificationsVariants} custom={1}>
                     <p className='text-xl xl:text-2xl font-bold mb-2'>TecLab</p>
                     <ul className='text-base xl:text-xl text-cyan-50  mb-5'>
                         <li>
@@ -31,8 +44,8 @@ export default function Certificaciones() {
                             (Cursando 2do año)
                         </li>
                     </ul>
-                </div>
-                <div className='row-span-3'>
+                </motion.div>
+                <motion.div className='row-span-3' variants={certificationsVariants} custom={2}>
                     <p className='text-xl xl:text-2xl font-bold mb-2'>
                         Educación IT
                     </p>
@@ -48,8 +61,8 @@ export default function Certificaciones() {
                         <li>Introducción a UX</li>
                         <li>Desarrollo Web con HTML</li>
                     </ul>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div variants={certificationsVariants} custom={3}>
                     <p className='text-xl xl:text-2xl font-bold mb-2'>
                         FreeCodeCamp
                     </p>
@@ -57,14 +70,14 @@ export default function Certificaciones() {
                         <li>JavaScript Algorithms and Data Structures</li>
                         <li>Responsive Web Design</li>
                     </ul>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div variants={certificationsVariants} custom={4}>
                     <p className='text-xl xl:text-2xl font-bold mb-2'>UTN</p>
                     <ul className='text-base xl:text-xl text-cyan-50  mb-5'>
                         <li>Introducción a la programación</li>
                     </ul>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </motion.section>
     );
 }
