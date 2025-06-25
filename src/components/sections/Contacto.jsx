@@ -50,7 +50,7 @@ export default function Contacto() {
                     </a>
                 </li>
                 <li>
-                    <a href='/files/CV DEV Oscar Mumm.pdf' download className='bg-cyan-300 p-3 text-cyan-900 font-bold rounded-lg shadow-lg'>
+                    <a href='/files/CV Oscar Mumm - Software Developer 2025.pdf' download className='bg-cyan-300 p-3 text-cyan-900 font-bold rounded-lg shadow-lg'>
                         Descargar CV
                     </a>
                 </li>

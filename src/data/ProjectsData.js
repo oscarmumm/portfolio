@@ -5,8 +5,26 @@ import imagenSGC4 from '../assets/img/projects/SGC4.webp';
 import imagenSGC5 from '../assets/img/projects/SGC5.webp';
 import imagenGestorProyectos from '../assets/img/projects/Gestor-de-proyectos.webp';
 import imagenAppClima from '../assets/img/projects/app-del-clima.webp';
+import imagenKeepNotes from '../assets/img/projects/keep-notes.webp'
 
 export const ProjectsData = [
+    {
+        titulo: 'Keep Notes',
+        descripcion:
+            'Una web-app sencilla que permite crear, editar y eliminar notas. Adicionalmente permite fijar las notas en la parte superior de la interfaz y cambiar el color en que se muestra cada una de ellas.',
+        imagenPortada: imagenKeepNotes,
+        imagenes: [],
+        demo: 'https://store-management-oscardev.netlify.app/',
+        codigo: 'https://github.com/oscarmumm/sistema-gestion-inventario',
+        tecnologias: [
+            'typeScript',
+            'react',
+            'tailwind',
+            'react-router',
+            'framer-motion',
+            'git',
+        ],
+    },
     {
         titulo: 'Sistema de Gestión de Negocio (prototipo)',
         descripcion:
