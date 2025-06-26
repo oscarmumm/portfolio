@@ -14,8 +14,8 @@ export const ProjectsData = [
             'Una web-app sencilla que permite crear, editar y eliminar notas. Adicionalmente permite fijar las notas en la parte superior de la interfaz y cambiar el color en que se muestra cada una de ellas.',
         imagenPortada: imagenKeepNotes,
         imagenes: [],
-        demo: 'https://store-management-oscardev.netlify.app/',
-        codigo: 'https://github.com/oscarmumm/sistema-gestion-inventario',
+        demo: 'https://oscardev-notesapp.netlify.app/',
+        codigo: 'https://github.com/oscarmumm/notes-app',
         tecnologias: [
             'typeScript',
             'react',
