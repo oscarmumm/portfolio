@@ -4,9 +4,9 @@ import { Footer } from "../components/Footer";
 
 export const AppLayout = () => {
     return (
-        <div>
+        <div className="bg-white text-slate-950 dark:bg-slate-800 dark:text-slate-100">
             <Header />
-            <div className="mt-12">
+            <div className="mt-16">
                 <Outlet />
             </div>
             <Footer />

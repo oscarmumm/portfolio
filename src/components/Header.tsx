@@ -1,19 +1,19 @@
-import { useState } from "react";
-import { MdMenu } from "react-icons/md";
-import { Navbar } from "./Navbar";
+import { useState } from 'react';
+import { MdMenu } from 'react-icons/md';
+import { Navbar } from './Navbar';
+import { AnimatePresence } from 'motion/react';
 
 export const Header = () => {
     const [navBarActive, setNavBarActive] = useState<boolean>(false);
     return (
-        <header className="fixed top-0 w-full flex items-center justify-between p-3">
+        <header className="fixed top-0 w-full h-16 flex items-center justify-between p-3 shadow-xl z-40 bg-white text-slate-950 dark:bg-slate-800 dark:text-slate-100">
             <h1>OSCAR</h1>
             <button
-                className="md:hidden"
-                onClick={() => setNavBarActive(!navBarActive)}
-            >
+                className="md:hidden text-2xl p-3"
+                onClick={() => setNavBarActive(!navBarActive)}>
                 <MdMenu />
             </button>
-            <Navbar isOpen={navBarActive} />
+            <AnimatePresence>{navBarActive && <Navbar />}</AnimatePresence>
         </header>
     );
 };
