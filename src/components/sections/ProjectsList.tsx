@@ -1,10 +1,14 @@
 import { Link } from "react-router";
+import { ProjectCard } from "../ProjectCard";
 
 export const ProjectsList = () => {
     return (
-        <div>
-            <h2>ProjectsList</h2>
-            <Link to="/projects">View all projects </Link>
+        <div className="p-4">
+            <h2>Mis proyectos</h2>
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <Link to="/projects">Ver todos... </Link>
         </div>
     );
 };

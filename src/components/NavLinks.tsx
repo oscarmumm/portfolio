@@ -14,27 +14,24 @@ export const NavLinks = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="flex flex-col md:flex-row items-center justify-center p-3 font-bold bg-white text-slate-950 dark:bg-slate-800 dark:text-slate-100"
+            className="flex flex-col md:flex-row items-center justify-center h-[calc(100vh-64px)] md:h-full p-3 font-bold bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-50"
         >
-            <li className="p-3">
+            <li className="p-5 md:p-3">
                 <a href="/#start">Start</a>
             </li>
-            <li className="p-3">
-                <a href="/#about">About</a>
-            </li>
-            <li className="p-3">
+            <li className="p-5 md:p-3">
                 <a href="/#projects">Projects</a>
             </li>
-            <li className="p-3">
+            <li className="p-5 md:p-3">
                 <a href="/#skills">Skills</a>
             </li>
-            <li className="p-3">
+            <li className="p-5 md:p-3">
                 <a href="/#certifications">Certifications</a>
             </li>
-            <li className="p-3">
+            <li className="p-5 md:p-3">
                 <a href="/#contact">Contact</a>
             </li>
-            <li className="p-3">
+            <li className="p-5 md:p-3">
                 <ThemeButton />
             </li>
         </motion.ul>
