@@ -14,7 +14,7 @@ export const NavLinks = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="flex flex-col md:flex-row items-center justify-center h-[calc(100vh-64px)] md:h-full p-3 font-bold bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-50"
+            className="flex flex-col md:flex-row items-center justify-center h-[calc(100vh-64px)] md:h-full p-3 font-bold bg-white text-slate-900 dark:bg-slate-800 dark:text-slate-50"
         >
             <li className="p-5 md:p-3">
                 <a href="/#start">Start</a>
