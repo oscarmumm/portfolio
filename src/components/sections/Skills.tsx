@@ -13,88 +13,80 @@ import { SiFramer } from 'react-icons/si';
 
 export const Skills = () => {
     return (
-        <div className="p-4">
-            <h2>Skills</h2>
-            <ul>
-                <li>
-                    <span>
+        <div className="p-4 w-full max-w-6xl">
+            <h2 className='my-3 text-2xl font-semibold'>Skills</h2>
+            <ul className='grid grid-cols-2 md:grid-cols-4 gap-3'>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <FaHtml5 />
                     </span>
-                    <span>HTML</span>
+                    <span className='ml-3'>HTML</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <FaCss3Alt />
                     </span>
-                    <span>CSS</span>
+                    <span className='ml-3'>CSS</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <BiLogoJavascript />
                     </span>
-                    <span>JavaScript</span>
+                    <span className='ml-3'>JavaScript</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <BiLogoTypescript />
                     </span>
-                    <span>TypeScript</span>
+                    <span className='ml-3'>TypeScript</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <FaGitAlt />
                     </span>
-                    <span>Git</span>
+                    <span className='ml-3'>Git</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <FaReact />
                     </span>
-                    <span>React</span>
+                    <span className='ml-3'>React</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <RiTailwindCssFill />
                     </span>
-                    <span>Talwind</span>
+                    <span className='ml-3'>Tailwind CSS</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <FaBootstrap />
                     </span>
-                    <span>Bootstrap</span>
+                    <span className='ml-3'>Bootstrap</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <BiLogoPostgresql />
                     </span>
-                    <span>PostgreSQL</span>
+                    <span className='ml-3'>PostgreSQL</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <SiReactrouter />
                     </span>
-                    <span>React Router</span>
+                    <span className='ml-3'>React Router</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <FaNodeJs />
                     </span>
-                    <span>Node JS</span>
+                    <span className='ml-3'>Node JS</span>
                 </li>
-                <li>
-                    <span>
+                <li className='p-3 flex items-center rounded-xl shadow-xl text-xl bg-white dark:bg-slate-800'>
+                    <span className='text-4xl'>
                         <SiFramer />
                     </span>
-                    <span>Motion</span>
-                </li>
-                <li>
-                    <span></span>
-                    <span></span>
-                </li>
-                <li>
-                    <span></span>
-                    <span></span>
+                    <span className='ml-3'>Motion</span>
                 </li>
             </ul>
         </div>

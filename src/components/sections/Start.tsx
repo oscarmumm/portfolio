@@ -2,7 +2,7 @@ import hero from '../../assets/hero.png';
 
 export const Start = () => {
     return (
-        <div className="p-4 flex flex-col justify-around items-center md:flex-row-reverse w-full max-w-6xl">
+        <div className="p-4 my-5 flex flex-col justify-around items-center md:flex-row-reverse w-full max-w-6xl">
             <img src={hero} alt="" />
             <div>
                 <h1 className="text-6xl font-bold">Oscar Mumm</h1>
@@ -21,7 +21,7 @@ export const Start = () => {
                     claras, intuitivas y eficientes, cuidando tanto la
                     experiencia del usuario como la calidad del código.
                 </p>
-                <button className="p-4 rounded-xl shadow-xl cursor-pointer dark:bg-white dark:text-slate-900 bg-slate-900 text-slate-50">
+                <button className="p-3 hover:scale-105 rounded-xl shadow-xl cursor-pointer dark:bg-white dark:text-slate-900 bg-slate-900 text-slate-50">
                     Descargar CV
                 </button>
             </div>
